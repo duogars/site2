@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 Not Found - Educational Site</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f9ff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: #4a90e2;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #4a90e2;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #357abd;
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      color: #666;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+      .icon {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">📚</div>
+    <h1>404 - Page Not Found</h1>
+    <p>Sorry, the page you are looking for doesn't exist on this educational site.<br/>
+       But every mistake is an opportunity to learn!</p>
+    <button onclick="goBack()">Go Back</button>
+
+    <div class="quote" id="quote">"Education is the most powerful weapon which you can use to change the world." – Nelson Mandela</div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    // Show quote after a few seconds to reinforce the educational theme
+    window.onload = function () {
+      setTimeout(function () {
+        document.getElementById('quote').style.opacity = 1;
+      }, 2000);
+    };
+  </script>
+</body>
+</html>
